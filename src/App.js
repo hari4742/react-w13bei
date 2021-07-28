@@ -110,6 +110,7 @@ export default class App extends React.Component {
                     key={index}
                     changeSymbol={() => {
                       this.handleClick(index);
+                      this.checkWinner('close');
                       this.checkWinner('radio_button_unchecked'); 
                     }}
                     symbol={card.symbol}

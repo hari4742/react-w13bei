@@ -85,7 +85,14 @@ export default class App extends React.Component {
   handelStart =()=>{
     document.getElementById("board").classList.remove('board');
     document.getElementById("btnReset").classList.remove('board');
+    document.getElementById("btnBack").classList.remove('board');
     document.getElementById("menu").classList.add('board');
+  };
+  handleBack = ()=>{
+    document.getElementById("board").classList.add('board');
+    document.getElementById("btnReset").classList.add('board');
+    document.getElementById("btnBack").classList.add('board');
+    document.getElementById("menu").classList.remove('board');  
   };
   render() {
     return (
@@ -111,7 +118,10 @@ export default class App extends React.Component {
                 );
               })}
             </div>
+            <div id="btns">
             <p id='btnReset' className="board" onClick={this.handleReset}>Reset Board</p>
+            <p id='btnBack' className="board" onClick={this.handleBack}>Back</p>
+            </div>
             <p id='result'>{this.state.result}</p>
           </div>
           <Player stat={status} playerName={this.state.player} playerIndex={1} changePlayerName={this.handlePlayerName}/>

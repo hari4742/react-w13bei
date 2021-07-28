@@ -24,7 +24,9 @@ export default class Menu extends React.Component{
   render(){
     return(
       <div id="menu">
+        <span>Menu</span>
         <span className="menuOpt"><input tabIndex='0' type="text" onBlur={()=>this.changeAvatar(0)} placeholder="Enter Name" onChange={(el)=>{this.handleChange(el,0)}} value={this.state.person[0]}/></span>
+        <span>Vs</span>
         <span className="menuOpt"><input tabIndex='1'  type="text" onBlur={()=>this.changeAvatar(1)} placeholder="Enter Name" onChange={(el)=>{this.handleChange(el,1)}} value={this.state.person[1]}/></span>
         <p className="menuOpt" tabIndex='2' onClick={this.props.handleClick}>Start Game</p>
       </div>

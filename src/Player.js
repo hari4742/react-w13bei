@@ -8,6 +8,7 @@ export default class Player extends React.Component {
     svg: ''
   };
   avatardivId = `avatar${this.props.playerIndex}`;
+  playerCardId = `playerCard${this.props.playerIndex}`;
   handleChange = el => {
     this.props.changePlayerName(el, this.props.playerIndex);
     this.setState({ person: el.target.value });
@@ -22,7 +23,7 @@ export default class Player extends React.Component {
   };
   render() {
     return (
-      <div id="playerCard">
+      <div id={this.playerCardId}>
         <div id={this.avatardivId}>
           <img src="https://www.svgrepo.com/show/13656/user.svg" alt="Avatar" />
         </div>
